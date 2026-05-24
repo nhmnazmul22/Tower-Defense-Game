@@ -1,6 +1,6 @@
-import {TileType} from "../Enums/TileType";
-import Tile from "./Tile";
-import {IPosition} from "../Interface/IPosition";
+import {TileType} from "../Enums/TileType.js";
+import Tile from "./Tile.js";
+import {IPosition} from "../Interface/IPosition.js";
 
 class GameMap {
     private tiles: Tile[][] = [];
@@ -10,9 +10,9 @@ class GameMap {
     }
 
     private buildLayout(){
-        for (let row = 1; row <= this.layout.row; row++) {
+        for (let row = 0; row < this.layout.row; row++) {
             this.tiles[row] = [];
-            for (let col = 1; col <= this.layout.col; col++) {
+            for (let col = 0; col < this.layout.col; col++) {
                 this.tiles[row][col] = new Tile(this.tileType, {row, col});
             }
         }

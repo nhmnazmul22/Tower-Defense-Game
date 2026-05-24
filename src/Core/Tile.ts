@@ -1,5 +1,5 @@
-import {TileType} from "../Enums/TileType";
-import {IPosition} from "../Interface/IPosition";
+import {TileType} from "../Enums/TileType.js";
+import {IPosition} from "../Interface/IPosition.js";
 
 class Tile{
     public constructor(public type: TileType, public position: IPosition) {

@@ -21,18 +21,15 @@ class Game {
     }
 
     private loop = (timestamp: number) => {
-        // Update
         if (!this.lastTimestamp) this.lastTimestamp = timestamp;
         const dt = timestamp - this.lastTimestamp;
         this.lastTimestamp = timestamp;
-
-        // Render
+        console.log('lastTimestamp',this.lastTimestamp);
         this.update(dt);
         this.draw();
 
 
         this.animationFrameId = requestAnimationFrame(this.loop);
-
     }
 
     private update(dt: number) {
@@ -44,4 +41,4 @@ class Game {
     }
 }
 
-module.exports = Game;
+export default Game;
